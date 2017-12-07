@@ -32,18 +32,18 @@ it('renders products', () => {
 	expect(wrapper.find(".product").length).toBe(1);
 });
 
-it('adds a product to the shopping cart', () => {
-	const store = mockStore({
-		products: [
-			{id: 1, name: "Hola mundo", price: 100.10, image: ""}
-		]
-	});
+// it('adds a product to the shopping cart', () => {
+// 	const store = mockStore({
+// 		products: [
+// 			{id: 1, name: "Hola mundo", price: 100.10, image: ""}
+// 		]
+// 	});
 
-	const wrapper = mount(<ConnectedProductList store={store} />);
-	wrapper.find("#product-1 button").simulate("click");
+// 	const wrapper = mount(<ConnectedProductList store={store} />);
+// 	wrapper.find("#product-1 button").simulate("click");
 
-	const actions = store.getActions();
-	expect(actions.length).toBe(1);
-	expect(actions[0].type).toBe("ADD_TO_CART");
-	expect(actions[0].product).not.toBeNull();
-});
+// 	const actions = store.getActions();
+// 	expect(actions.length).toBe(1);
+// 	expect(actions[0].type).toBe("ADD_TO_CART");
+// 	expect(actions[0].product).not.toBeNull();
+// });
